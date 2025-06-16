@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>景點介紹</title>
+<!-- 字型引入 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
+<style>
+* {
+    padding: 0;
+    margin: 0;
+}
+body, html {	
+    font-family: "Klee One", "Arial", "微軟正黑體";
+    background-color: #CCCCCC;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #2a5290;
+    padding: 10px;
+    color: aliceblue;
+    font-size: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    overflow: hidden;
+    padding: 15px;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    list-style: none;
+}
+
+.nav li a {
+    font-size: 30px;
+    display: block;
+    width: 150px;
+    height: 60px;
+    background-color: #2a5290;
+    color: aliceblue;
+    text-decoration: none;
+    margin-right: 15px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.nav li a:hover {
+    transition: all 0.4s;
+    background-color: rgb(77, 204, 255);
+}
+
+.content {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.content h1 {
+    color: #2a5290;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #2a5290;
+    text-align: center;
+    padding: 10px 20px;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.top {
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.spot {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.spot img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+.spot h2 {
+    color: #2a5290;
+    margin-top: 10px;
+}
+
+.spot p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* 所有景點標題連結 hover 效果 */
+.spot h2 a {
+    color: #2a5290;
+    text-decoration: none;
+}
+
+.spot h2 a:hover {
+    color: rgb(77, 204, 255);
+    text-decoration: underline;
+}
+.burger {
+    display: none;
+    font-size: 40px;
+    cursor: pointer;
+	padding: 10px;
+	line-height: 1;
+}
+@media (max-width: 768px) {
+
+.content {
+flex-direction: column;
+}
+.box {
+	width: 100%;
+	height: auto;
+}
+
+.box img {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+}
+
+.nav ul {
+	flex-direction: column;
+	align-items: center;
+	width: 160px;
+}
+
+.nav li a {
+	width: 150px;
+	margin-bottom: 10px;
+}
+
+.header {
+	flex-direction: column;
+	font-size: 40px;
+}
+
+.burger {
+	display: block;
+}
+.nav {
+	max-height: 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+.nav.show {
+	max-height: 500px;
+	padding: 15px;
+	transition: all 0.5s;
+} 
+}
+</style>
+</head>
+<body>
+    <div class="header">
+        <div class="burger" id="burger" onclick="toggleMenu()">☰</div>
+        <a>景點介紹</a>
+        <div class="nav" id="menu">
+            <ul> 
+                <li><a href="01_index.html">首頁</a></li>
+                <li><a href="02_map.html">導覽地圖</a></li>
+    			<li><a href="04_plan.html">行程建議</a></li>
+    			<li><a href="05_about.html">關於我們</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        
+        <!-- 景點 1 -->
+        <div class="spot">
+            <h2><a href="https://wengweng.tw/jushiuehgau/" target="_blank">仿巴洛克式建築</a></h2>
+            <img src="image\P_20250423_110945.jpg" alt="仿巴洛克式建築">
+            <p>深坑老街保留了許多仿巴洛克式建築，這些建築融合了西洋風格與台灣在地工法，常見拱形窗戶、紅磚牆面與細緻山牆雕刻，是日治時期留下的重要文化資產。漫步老街，除了品嚐美食，也能欣賞這些具有歷史韻味的建築風貌。</p>
+        </div>
+
+        <!-- 景點 2 -->
+        <div class="spot">
+            <h2><a href="https://www.facebook.com/tastetofu/" target="_blank">深坑廳</a></h2>
+            <img src="image\P_20250423_122351.jpg" alt="深坑廳" height="">
+            <p>深坑廳為清代行政單位，原設於新北市深坑區，是當時管理深坑地區的重要機構。現址已不復存在，但「深坑廳」的歷史意義仍影響著當地發展。如今，深坑老街保留了部分與深坑廳相關的歷史遺跡與街道格局，成為遊客了解深坑過去的重要窗口。</p>
+        </div>
+
+    </div>
+
+		<script>
+		function toggleMenu() {
+			var menu = document.getElementById("menu");
+			var burger = document.getElementById("burger");
+			menu.classList.toggle("show");
+			
+			if (menu.classList.contains("show")) {
+				burger.innerHTML = "✖";
+			} else {
+				burger.innerHTML = "☰";
+			}
+		}
+		</script>
+    <div class="footer">
+        <a href="#" class="top">back-to-top</a>
+    </div>
+</body>
+</html>
